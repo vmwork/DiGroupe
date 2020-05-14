@@ -1,0 +1,569 @@
+.options
+    display: flex
+    flex-direction: column
+    &-block
+        width: 100%
+        min-height: 200px
+        padding: 24px 20px
+        background: url('../img/options/office-mob.png') no-repeat
+        background-size: cover
+        margin-bottom: 10px
+        box-sizing: border-box
+        span
+            font-weight: bold
+            font-size: 25px
+            line-height: 29px
+            letter-spacing: -0.02em
+            color: $white
+            margin-bottom: 15px
+            display: block
+        &-wrapp
+            display: flex
+            flex-direction: column
+            a
+                font-weight: normal
+                font-size: 12px
+                line-height: 28px
+                color: $white
+                img 
+                    margin-left: 10px
+        &:nth-child(2)
+            background: url('../img/options/property-mob.png') no-repeat
+            background-size: cover
+            .options-block-wrapp
+                flex-direction: row 
+                flex-wrap: wrap
+                a
+                    flex-basis: 70%
+                    &:nth-child(2), &:nth-child(4)
+                        flex-basis: 30%
+                        
+        &:nth-child(3)
+            background: url('../img/options/business-mob.png') no-repeat
+            background-size: cover
+        &:nth-child(4)
+            background: url('../img/options/land-mob.png') no-repeat
+            background-size: cover
+            
+.news
+    padding-top: 30px
+    padding-bottom: 30px
+    background: $main-bg
+    .section-title
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 30px
+        a 
+            font-weight: 500
+            font-size: 14px
+            line-height: 16px
+            text-align: right
+            color: $text-color
+            img 
+                margin-left: 10px
+    &-block
+        background: $white
+        max-width: 244px
+        margin: 0 auto
+        padding: 0px 14px 42px 14px
+        box-sizing: border-box
+        img 
+            margin: 0 -14px
+            margin-bottom: 5px
+            min-width: 244px
+        span 
+            font-weight: 500
+            font-size: 14px
+            line-height: 18px
+            letter-spacing: -0.025em
+            color: $text-color
+        p 
+            font-style: normal
+            font-weight: 300
+            font-size: 12px
+            line-height: 18px
+            color: $text-color
+            margin-top: 10px
+            margin-bottom: 15px
+        &-calendar
+            display: flex
+            align-items: center
+            span 
+                font-weight: 300
+                font-size: 10px
+                line-height: 10px
+                color: $text-color-silver_white
+            img
+                margin: 0 0px
+                margin-bottom: 0
+                min-width: max-content
+                margin-right: 5px
+    .swiper-button-next.news-button-next
+        right: 0
+        top: 46%
+    .swiper-button-prev.news-button-prev
+        left: 0
+        top: 46%
+.main-services
+    padding-top: 30px
+    background: $main-bg
+    .section-title
+        margin-bottom: 35px
+        text-align: center
+    &-wrapp
+        min-height: 50px
+        display: flex
+        flex-direction: column
+        margin-bottom: 35px
+        img 
+            display: flex
+            width: max-content
+        span 
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            letter-spacing: -0.04em
+            color: $text-color
+            margin-top: 15px
+            margin-bottom: 17px
+        p 
+            font-weight: 300
+            font-size: 14px
+            line-height: 28px
+            color: $text-color
+        &:hover 
+            span 
+                color: $bg-red
+.main-about
+    padding-bottom: 15px
+    padding-top: 20px
+    &-wrapp
+        .logo-text
+            display: flex
+            justify-content: center
+            margin-bottom: 15px
+            a 
+                img 
+                    width: auto
+                    min-height: 60px
+        span 
+            margin-bottom: 20px
+            display: block 
+            font-weight: 500
+            font-size: 16px
+            line-height: 25px
+            letter-spacing: -0.025em
+        p 
+            font-weight: 300
+            font-size: 14px
+            line-height: 160%
+            margin-bottom: 15px
+        .btn
+            display: none 
+    &-img
+        margin-bottom: 35px
+        img 
+            max-width: 290px
+.main-description
+    background: $bg-red
+    position: relative
+    padding: 30px 0
+    padding-bottom: 20px
+    &-wrapp
+        span
+            font-weight: bold
+            font-size: 25px
+            line-height: 30px
+            letter-spacing: -0.04em
+            color: $white
+            margin-bottom: 30px
+            display: block
+        p 
+            margin-bottom: 50px
+    p 
+        font-weight: 500
+        font-size: 14px
+        line-height: 24px
+        color: $white
+        position: relative
+        z-index: 1
+    &-img
+        position: absolute
+        bottom: 0
+        right: 0
+        height: 160px
+        width: 110%
+        overflow: hidden
+        margin: 0 -5px
+        img 
+            width: 100%
+            margin-top: -23%
+.main-offers
+    background: $main-bg
+    padding: 30px 0
+    &-count, span.main-offers-count_num
+        font-weight: 300
+        font-size: 12px
+        line-height: 28px
+        color: $text-color
+    .offers-slider
+        .offers-slide
+            background: $white
+            min-height: 319px
+            padding: 0 20px 24px 20px 
+            box-sizing: border-box
+            max-width: 244px
+            box-shadow: 3.09841px 3.09841px 11.619px rgba(0, 0, 0, 0.03)
+            border-radius: 2.32381px
+            .offers-slider-slide
+                margin: 0 -20px
+                .swiper-slide
+                    text-align: center
+                .pagination-main 
+                    position: absolute
+                    bottom: 20px
+                    left: 50%
+                    transform: translateX(-50%)
+                    z-index: 2
+                    .offers-swiper_pagination
+                        display: flex
+                        .swiper-pagination-bullet
+                            box-sizing: border-box
+                            width: 10px
+                            height: 10px
+                            background: $white
+                            margin-right: 7px
+                            border-radius: 50%
+                            opacity: 1
+                            &:last-child
+                                margin-right: 0px
+                            &-active
+                                background: $bg-red
+            span
+                display: block
+                font-weight: normal
+                font-size: 13px
+                line-height: 120%
+                color: $text-color-silver_bold
+            .main-offers-title
+                font-weight: 500
+                font-size: 12px
+                line-height: 120%
+                text-decoration-line: underline
+                color: $text-color
+                margin-top: 16px
+                margin-bottom: 10px
+            .main-offers-price
+                font-weight: 500
+                font-size: 18px
+                line-height: 120%
+                color: $text-color-black
+                margin-top: 7px
+                margin-bottom: 5px
+            .main-offers-icons
+                display: flex
+                margin-top: 17px
+                &_analitics
+                    margin-left: 16px
+                    margin-right: 15px
+
+
+@media ( min-width: 768px  )
+    .options
+        display: flex
+        flex-direction: row 
+        flex-wrap: wrap
+        justify-content: space-between
+        &-block
+            margin-bottom: 10px
+            flex-basis: 49.5%
+            &:nth-child(2)
+                .options-block-wrapp
+                    a
+                        flex-basis: 60%
+                        &:nth-child(2), &:nth-child(4)
+                            flex-basis: 40%
+    .news
+        .section-title
+            margin-bottom: 25px
+        &-block
+            max-width: 230px
+            width: 230px
+            margin: 0 auto
+            padding: 0px 14px 0px 14px
+            min-height: 440px
+            img 
+                margin-bottom: 5px
+                min-width: 230px
+            span 
+                display: block
+            &-calendar
+                img
+                    min-width: max-content
+                    margin-right: 5px
+        .swiper-button-next.news-button-next
+            display: none
+        .swiper-button-prev.news-button-prev
+            display: none
+    .main-services
+        padding-top: 30px
+        .section-title
+            margin-bottom: 75px
+        &-wrapp
+            min-height: 182px
+            margin-bottom: 55px
+            &_img
+                min-height: 43px
+
+    .main-about
+        padding-bottom: 15px
+        padding-top: 80px
+        .btn
+            display: none
+        &-wrapp
+            .logo-text
+                display: flex
+                justify-content: flex-start
+                margin-bottom: 20px
+            .btn
+                display: flex 
+                max-width: 233px
+        span 
+            margin-bottom: 25px
+        p 
+            line-height: 24px
+            margin-bottom: 20px
+        &-img
+            margin-bottom: 0px
+            margin-top: 115px
+            img 
+                max-width: 350px
+                width: 100%
+    .main-description
+        padding-bottom: 48px
+        padding-top: 38px
+        p 
+            margin-top: 80px
+            font-size: 14px
+            line-height: 24px
+        &-wrapp
+            span
+                margin-bottom: 20px
+            p 
+                margin-bottom: 0px
+                margin-top: 0
+
+        &-img
+            height: 100%
+            width: 50%
+            margin: 0 0px
+            margin-right: -5px
+            img 
+                margin-top: 0
+@media ( min-width: 991px  )
+    .news
+        .section-title
+            margin-bottom: 25px
+        &-block
+            max-width: 100%
+            width: 300px
+            margin: 0 auto
+            padding: 0px 14px 0px 14px
+            min-height: 454px
+            img 
+                margin-bottom: 5px
+                min-width: 300px
+            span 
+                display: block
+            &-calendar
+                img
+                    min-width: max-content
+                    margin-right: 5px
+    .main-about
+        padding-bottom: 15px
+        padding-top: 80px
+        &-wrapp
+            .logo-text
+                margin-bottom: 35px
+                a 
+                    img 
+                        width: auto
+                        min-height: 60px
+            span 
+                margin-bottom: 35px
+                font-size: 25px
+                line-height: 35px
+            p 
+                margin-bottom: 30px
+        &-img
+            margin-top: 60px
+            img 
+                max-width: 588px
+    .main-description
+        padding-bottom: 128px
+        padding-top: 75px
+        p 
+            margin-top: 80px
+            margin-top: 110px
+            margin-left: 60px
+        &-wrapp
+            span
+                margin-bottom: 50px
+                max-width: 900px
+            p 
+                margin-bottom: 0px
+                margin-top: 0
+                max-width: 840px    
+                margin-left: 0
+
+        &-img
+            margin: 0 0px
+            margin-right: -5px
+            img 
+                margin-top: 0
+
+@media ( min-width: 1380px  )
+    .options
+        display: grid
+        grid-template-columns: 34% auto auto auto auto auto
+        grid-template-rows: auto auto
+        gap: 30px 30px
+        grid-template-areas: "f f s s s s" "f f t t fo fo"
+        &-block
+            grid-area: f
+            margin-bottom: 0px
+            padding: 48px
+            flex-basis: 49.5%
+            background: url('../img/options/office.png') no-repeat
+            background-size: cover
+            height: 655px
+            span 
+                font-size: 40px
+                line-height: 46px
+                letter-spacing: -0.02em
+                margin-bottom: 35px
+            a
+                font-size: 18px
+                line-height: 40px
+            &:nth-child(2)
+                padding: 48px 63px
+                grid-area: s
+                flex-basis: 60%
+                height: 316px
+                .options-block-wrapp
+                    a
+                        flex-basis: 60%
+                        &:nth-child(2), &:nth-child(4)
+                            flex-basis: 40%
+            &:nth-child(3)
+                padding: 48px 63px
+                grid-area: t
+                height: 309px
+            &:nth-child(4)
+                padding: 48px 63px
+                grid-area: fo
+                height: 309px
+            
+    .news
+        .section-title
+            margin-bottom: 35px
+            align-items: center
+        &-block
+            max-width: 100%
+            width: 430px
+            margin: 0 auto
+            padding: 0px 24px 0px 24px
+            min-height: 594px
+            img 
+                margin: 0 -24px
+                margin-bottom: 15px
+                min-width: 430px
+            span 
+                display: block
+                font-size: 22px
+                line-height: 30px
+            p 
+                font-size: 14px
+                line-height: 160%
+                margin-top: 20px
+                margin-bottom: 20px
+            &-calendar
+                img
+                    margin: 0 0
+                    min-width: max-content
+                    margin-right: 11px
+                span 
+                    font-size: 12px
+                    line-height: 160%
+    .main-services
+        padding-top: 50px
+        padding-bottom: 124px
+        .section-title
+            max-width: 600px
+            margin: 0 auto
+            margin-bottom: 70px
+        .main-services-block
+            display: flex 
+            justify-content: center
+            // .main-services-wrapp
+            //     margin: 0 auto
+        &-wrapp
+            max-width: 302px
+            min-height: 245px
+            margin-bottom: 75px
+            span 
+                font-size: 25px
+                line-height: 29px
+                max-width: 230px
+            p 
+                font-size: 16px
+                line-height: 28px
+             
+
+
+                
+
+
+    .main-description
+        p 
+            font-size: 18px
+            line-height: 32px
+            margin-left: 90px
+            margin-top: 160px
+        &-wrapp
+            span
+                font-size: 55px
+                line-height: 55px
+                letter-spacing: -0.04em
+            p 
+                margin-bottom: 0px
+                margin-top: 0
+                margin-left: 0
+
+        &-img
+            width: 37%
+            margin: 0 0px
+            margin-right: -5px
+
+            img 
+                margin-top: 0
+                height: auto
+                position: absolute
+                bottom: -10px
+                left: 0
+                max-width: none
+                width: 100%
+@media ( min-width: 1650px  )
+    .main-about
+        &-img
+            margin-top: 60px
+            img 
+                max-width: 588px
+                margin-left: 120px
+@media ( min-width: 1999px  )
+    .options
+        display: grid
+        grid-template-columns: 715px auto auto auto auto auto
+        grid-template-rows: auto auto
+        gap: 1px 1px

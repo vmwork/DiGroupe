@@ -1,0 +1,168 @@
+footer
+    padding-bottom: 40px
+    padding-top: 40px
+    background: $footer-bg
+    span, li, a, p
+        color: $white
+        font-weight: 300
+    a 
+        &:hover 
+            color: $text-color-silver
+    .number
+        font-weight: bold
+        font-size: 20px
+        line-height: 23px
+        color: $white
+        margin-bottom: 22px
+        a 
+            display: block
+            text-decoration-line: underline
+            font-weight: 300
+            font-size: 14px
+            line-height: 120%
+            color: $white
+    .socials
+        margin-top: 20px
+        display: flex
+        justify-content: space-between
+        max-width: 244px
+        align-items: center
+        margin-bottom: 20px
+        padding: 0 10px
+    .footer-copy
+        display: block
+        margin-top: 22px
+        margin-bottom: 10px
+        font-size: 12px
+        line-height: 180%
+        font-family: $fontFamilyLato
+    .footer-mail
+        font-size: 14px
+        line-height: 180%
+        display: block 
+        font-weight: 300
+    .footer-doc
+        margin-bottom: 10px
+        font-weight: 300
+        font-size: 12px
+        line-height: 180%
+        color: $text-color-silver
+        display: block 
+        text-decoration: underline
+    p 
+        margin-top: 20px
+        font-weight: 300
+        font-size: 12px
+        line-height: 18px
+        font-family: $fontFamilyLato
+    .footer-point
+        font-weight: 300
+        font-size: 14px
+        line-height: 180%
+        display: block
+        max-width: 250px
+    .dev-logo
+        display: none
+        flex-direction: column
+        span
+            font-size: 12px
+            line-height: 160%
+            margin-bottom: 5px
+            color: $text-color-silver_black
+    .row
+        .footer-block
+            &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
+                display: none
+                
+
+@media ( min-width: 768px  )
+    footer
+        .container
+            position: relative
+        .dev-logo
+            display: flex
+            position: absolute
+            top: -5px
+            right: 15px
+            span
+                text-align: right
+        .footer-point
+            max-width: 100%
+        .socials
+            margin-top: 30px
+            max-width: 224px
+            margin-bottom: 20px
+            padding: 0 0px
+
+@media ( min-width: 991px  )
+    footer
+        .row
+            .footer-block
+                &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5)
+                    display: block
+            &.column-five
+                .footer-block
+                    width: 20% 
+            .footer-title
+                font-weight: bold
+                font-size: 18px
+                line-height: 180%
+                margin-bottom: 15px
+                display: block
+            ul 
+                li
+                    margin-bottom: 0px
+                    a 
+                        font-weight: 300
+                        font-size: 14px
+                        line-height: 30px
+        p
+            max-width: 80%
+
+        .dev-logo
+            top: auto
+            bottom: 0px
+            right: 60px
+            span
+                text-align: left
+@media ( min-width: 1200px  )
+    footer
+        padding-bottom: 70px
+        padding-top: 50px
+        .number
+            font-size: 24px
+            line-height: 28px
+        .footer-point 
+            min-width: 290px
+        .socials
+            margin-top: 25px
+            max-width: 234px
+        p 
+            max-width: 86%
+        .dev-logo 
+            bottom: -20px
+            right: 60px
+        .row
+            &.column-five
+                .footer-block
+                    justify-content: flex-end
+                    display: flex
+                    &-wrapp
+                        margin-right: 0px
+                    &:nth-child(1)
+                        display: block
+                        .footer-block-wrapp
+                            margin-right: 0px
+                    &:nth-child(2)
+                        .footer-block-wrapp
+                            margin-right: -40px
+                    &:nth-child(5)
+                        justify-content: center
+                        .footer-block-wrapp
+                            margin-right: 0px
+                            margin-left: 40px
+
+
+
+
+ 
