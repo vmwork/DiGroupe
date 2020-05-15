@@ -74,13 +74,79 @@ function openMenuList(){
     mainSearch.classList.toggle('modal-hidden');
   }
   //  выбор недвижимости
+  const typeDialsTitle = document.querySelector('.type-dials-title');
   const typeDials = document.querySelector('.type-dials');
   const typeObjects = document.querySelector('.type-objects');
   const typeAreas  = document.querySelector('.type-areas');
-if(typeDials && typeObjects && typeAreas){
-  typeDials.children[0].addEventListener('click', () => typeDials.classList.toggle('type-dials-opend'))
-  typeObjects.children[0].addEventListener('click', () => typeObjects.classList.toggle('type-objects-opend'))
-  typeAreas.children[0].addEventListener('click', () => typeAreas.classList.toggle('type-areas-opend'))
+if(typeDials && typeObjects && typeAreas && typeDialsTitle){
+  typeDials.children[0].addEventListener('click', () => {
+        typeDials.classList.toggle('type-dials-opend')
+
+        for (let i = 1; i < typeDials.children.length; i++){
+     
+          typeDials.children[i].addEventListener('click', () => {
+            typeDials.children[0].textContent = typeDials.children[i].textContent
+            typeDials.classList.remove('type-dials-opend')
+          })
+        }
+  })
+
+  typeObjects.children[0].addEventListener('click', () => {
+    typeObjects.classList.toggle('type-objects-opend')
+    for (let i = 1; i < typeObjects.children.length; i++){
+     
+      typeObjects.children[i].addEventListener('click', () => {
+        typeObjects.children[0].textContent = typeObjects.children[i].textContent
+        typeObjects.classList.remove('type-objects-opend')
+      })
+    }
+  
+  })
+
+  typeAreas.children[0].addEventListener('click', () => {
+    typeAreas.classList.toggle('type-areas-opend')
+    for (let i = 1; i < typeAreas.children.length; i++){
+     
+      typeAreas.children[i].addEventListener('click', () => {
+        typeAreas.children[0].textContent = typeAreas.children[i].textContent
+        typeAreas.classList.remove('type-areas-opend')
+      })
+    }
+  })
+  
+  const typeDialFirst = document.querySelectorAll('.type-dial-first')
+  if(typeDialFirst){
+    for (let i = 0; i < typeDialFirst.length; i++){
+      typeDialFirst[i].addEventListener('click', (e) => {
+        let typeDialFirstParent = e.target.parentElement.querySelector('.type-container');
+        typeDialFirstParent.classList.toggle('show-menu')
+        
+        for (let j = 0; j < typeAreas.children.length; j++){
+         
+          typeDialFirstParent.children[j].addEventListener('click', () => {
+            typeDialFirst[i].textContent = typeDialFirstParent.children[j].textContent;
+            typeDialFirstParent.classList.add('show-menu')
+           
+          })
+        }
+      
+      })
+    }
+ 
+  }
+  
+  
+  typeDialsTitle.children[0].addEventListener('click', () => {
+    typeDialsTitle.classList.toggle('type-areas-opend')
+    for (let i = 1; i < typeDialsTitle.children.length; i++){
+     
+      typeDialsTitle.children[i].addEventListener('click', () => {
+        typeDialsTitle.children[0].textContent = typeDialsTitle.children[i].textContent
+        typeDialsTitle.classList.remove('type-areas-opend')
+      })
+    }
+    
+  })
    
 }
 
