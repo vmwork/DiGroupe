@@ -137,41 +137,65 @@
 			<section class="property">
 					<h2 class="property-title">Поиск коммерческой недвижимости</h2>
 					<p class="property-text">Укажите необходимые параметры и найдите то, что вам необходимо.</p>
-				<div class="property-container">
+				<div class="property-container tab1 ">
 				<div class="choose-property-container ">
 					<p class="dont-show">Тип сделки</p>
-				<ul class="choose-property desctop-mod">
-					<li class="commercial color-mod"> <span>Коммерческая недвижимость</span>	</li>
-					<li class="commercial"><span> Готовый бизнес</span></li>
-					<li class="commercial"><span>Земельный участок</span> </li>
-					<li class="commercial"> <span>Жилая недвижимость</span> </li>
-				</ul></div>
+				<ul class="choose-property desctop-mod ">
+					<li class="commercial  mobile-mode-menu  js-commercial"> <span>Коммерческая недвижимость</span>	</li>
+					<li class="commercial color-mod tab-toggle"><span> Коммерческая недвижимость</span></li>
+					<li class="commercial tab-toggle"><span> Готовый бизнес</span></li>
+					<li class="commercial tab-toggle"><span>Земельный участок</span> </li>
+					<li class="commercial tab-toggle"> <span>Жилая недвижимость</span> </li>
+				</ul>
+			
+			</div>
+			<div class="tabs-cotainer tab1">
 
-				<div class="choose-property-shoosen-container">
+				<div class="choose-property-shoosen-container ">
 					<div class="choose-property-container mobile-mod">
 						<p>Тип сделки</p>
 					<ul class="choose-property width-mod">
-						<li class="commercial type-dial">Продажа</li>
+						<li class="commercial type-dial js-commercial" >Продажа</li>
 						<li class="commercial type-dial">Обмен </li>
 						<li class="commercial type-dial">Покупка</li>
-					</ul></div>
+					</ul>
+					<ul class="choose-property2 width-mod closed-menu-property">
+						<li class="commercial type-dial js-commercial">Продажа</li>
+						<li class="commercial type-dial">Обмен </li>
+						<li class="commercial type-dial">Покупка</li>
+					</ul>
+				
+				</div>
 					<div class="choose-property-container">
 						<p>Тип объекта</p>
 					<ul class="choose-property width-mod width-mod2">
-						<li class="commercial type-dial">Дом</li>
+						<li class="commercial type-dial js-commercial">Офис</li>
+						<li class="commercial type-dial">Дом </li>
+						<li class="commercial type-dial">Ромашка</li>
+						<li class="commercial type-dial">Гараж </li>
+					</ul>
+					<ul class="choose-property2 width-mod width-mod2 closed-menu-property">
+						<li class="commercial type-dial js-commercial">Дом</li>
 						<li class="commercial type-dial">Гараж </li>
 						<li class="commercial type-dial">Ромашка</li>
-					</ul></div>
+				</div>
 
 					<div class="choose-property-container ">
 						<p>Район</p>
 					<ul class="choose-property width-mod2">
 						
 						
-						<li class="commercial type-dial">Вахитовский</li>
+						<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Вахитовский </li>
 						<li class="commercial type-dial">Гугловый </li>
 						<li class="commercial type-dial">Чудовый</li>
-					</ul></div>
+					</ul>
+					<ul class="choose-property2 width-mod2 closed-menu-property">
+					<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+				</div>
 				
 					<ul class="prices">
 						<div class="">Цена, руб.</div>
@@ -184,11 +208,300 @@
 						<input type="text" placeholder="До">
 					</ul>
 				</div>
+				<div class="property-footer">
+					<div class="advansed-block  advansed-block-inputs  advansed-search-hidden">
+						<p>Улица</p>
+						<input type="text" placeholder="Улица">
+						<p>Метро</p>
+						<input type="text" placeholder="Метро">
+					</div>
 				<div class="choose-property-buttons">
-					<button class="advansed-search">Расширенный поиск</button>
+					
+					<button class="advansed-search advansed-search-rotate">Расширенный поиск</button>
 					<button class="show-on-map">ПОКАЗАТЬ НА КАРТЕ</button>
 					<button class="show">Показать</button>
 				</div>
+				</div>
+			</div>
+			<!--  Таб 2-->
+			<div class="tabs-cotainer tab2 tab-hidden">
+				<div class="choose-property-shoosen-container">
+					<div class="choose-property-container mobile-mod">
+						<p>Тип бизнеса</p>
+					<ul class="choose-property width-mod">
+						<li class="commercial type-dial js-commercial">Арендный бизнес</li>
+						<li class="commercial type-dial">Обмен </li>
+						<li class="commercial type-dial">Покупка</li>
+					</ul>
+					<ul class="choose-property2 width-mod closed-menu-property">
+						<li class="commercial type-dial js-commercial">Арендный бизнес</li>
+						<li class="commercial type-dial">Обмен </li>
+						<li class="commercial type-dial">Покупка</li>
+					</ul>
+				
+				</div>
+					
+
+					<div class="choose-property-container ">
+						<p>Район</p>
+					<ul class="choose-property width-mod2">
+						
+						
+						<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Вахитовский </li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+					<ul class="choose-property2 width-mod2 closed-menu-property">
+					<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+				</div>
+				<div class="choose-property-container ">
+					<p>Улица</p>
+				
+					<input class="street" type="text">
+				
+			</div>
+				
+					<ul class="prices">
+						<div class="">Цена, руб.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+					<ul class="area">
+						<div class="">Площадь, кв.м.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+				</div>
+				<div class="property-footer">
+					<div class="advansed-block advansed-block-inputs advansed-search-hidden">
+						<p>Улица</p>
+						<input type="text" placeholder="Улица">
+						<p>Метро</p>
+						<input type="text" placeholder="Метро">
+					</div>
+				<div class="choose-property-buttons">
+					
+					<button class="advansed-search advansed-search-rotate">Расширенный поиск</button>
+					<button class="show-on-map">ПОКАЗАТЬ НА КАРТЕ</button>
+					<button class="show">Показать</button>
+				</div>
+				</div>
+			</div>
+			
+
+<!-- ТАБ 3 -->
+			<div class="tabs-cotainer tab3 tab-hidden">
+				<div class="choose-property-shoosen-container">
+					<div class="choose-property-container mobile-mod">
+						<p>Тип сделки</p>
+					<ul class="choose-property width-mod">
+						<li class="commercial type-dial js-commercial">Продажа</li>
+						<li class="commercial type-dial">Обмен </li>
+						<li class="commercial type-dial">Покупка</li>
+					</ul>
+					<ul class="choose-property2 width-mod closed-menu-property">
+						<li class="commercial type-dial js-commercial">Продажа</li>
+						<li class="commercial type-dial">Обмен </li>
+						<li class="commercial type-dial">Покупка</li>
+					</ul>
+				
+				</div>
+					
+			
+					<div class="choose-property-container ">
+						<p>Район</p>
+					<ul class="choose-property width-mod2">
+						
+						
+						<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Вахитовский </li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+					<ul class="choose-property2 width-mod2 closed-menu-property">
+					<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+				</div>
+				<div class="choose-property-container ">
+					<p>Улица</p>
+				
+					<input class="street" type="text">
+				
+			</div>
+				
+					<ul class="prices">
+						<div class="">Цена, руб.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+					<ul class="area">
+						<div class="">Площадь, кв.м.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+				</div>
+				<div class="property-footer">
+					<div class="advansed-block advansed-block-inputs advansed-search-hidden">
+						<p>Улица</p>
+						<input type="text" placeholder="Улица">
+						<p>Метро</p>
+						<input type="text" placeholder="Метро">
+					</div>
+				<div class="choose-property-buttons">
+					
+					<button class="advansed-search advansed-search-rotate">Расширенный поиск</button>
+					<button class="show-on-map">ПОКАЗАТЬ НА КАРТЕ</button>
+					<button class="show">Показать</button>
+				</div>
+				</div>
+			</div>
+			
+			<!-- ТАБ 4 -->
+			<div class="tabs-cotainer tab4 tab-hidden">
+				<div class="choose-property-shoosen-container">
+					<div class="choose-property-container mobile-mod tab4--mod">
+						<p>Район</p>
+					<ul class="choose-property width-mod">
+						
+						<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Вахитовский </li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+					<ul class="choose-property2 width-mod closed-menu-property">
+						<li class="commercial type-dial js-commercial">Вахитовский</li>
+						<li class="commercial type-dial">Гугловый </li>
+						<li class="commercial type-dial">Чудовый</li>
+					</ul>
+				
+				</div>
+					
+			
+					
+				<div class="choose-property-container ">
+					<p>Улица</p>
+				
+					<input class="street" type="text">
+				
+			</div>
+			<div class="choose-property-container rooms">
+				<p>Комнат</p>
+			<ul class="choose-property width-mod2">
+				
+				
+				<li class="commercial type-dial js-commercial">1</li>
+				<li class="commercial type-dial">1 </li>
+				<li class="commercial type-dial">2 </li>
+				<li class="commercial type-dial">3</li>
+			</ul>
+			<ul class="choose-property2 width-mod2 closed-menu-property">
+			<li class="commercial type-dial js-commercial">1</li>
+				<li class="commercial type-dial">2 </li>
+				<li class="commercial type-dial">3</li>
+			</ul>
+			</div>
+				
+					<ul class="prices">
+						<div class="">Цена, руб.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+					<ul class="area">
+						<div class="">Площадь, кв.м.</div>
+						<input type="text" placeholder="От">
+						<input type="text" placeholder="До">
+					</ul>
+					
+				</div>
+				<div class="property-checkboxes">
+				<ul class="property-checkbox">
+						
+						<input class="visually-hidden " type="radio" name="bilding" id="check1" checked>
+						<label for="check1">В новостройке</label>
+						<input class="visually-hidden " type="radio" name="bilding" id="check2">
+						<label  for="check2">Вторичка</label>
+					</ul>
+				</div>
+				<div class="property-footer">
+					<div class="advansed-block advansed-search-hidden">
+						<div class="choose-property-shoosen-container">
+						<ul class="floor">
+							<div class="">Этаж</div>
+							<input type="text" placeholder="От">
+							<input type="text" placeholder="До">
+						</ul>
+						<ul class="storeys">
+							<div class="">Этажность</div>
+							<input type="text" placeholder="От">
+							<input type="text" placeholder="До">
+						</ul>
+						<div class="choose-property-container bathroom">
+							<p>Санузел</p>
+						<ul class="choose-property width-mod2">
+							
+							
+							<li class="commercial type-dial js-commercial">С/у раздел</li>
+							<li class="commercial type-dial">С/у раздел </li>
+							<li class="commercial type-dial">С/у совмест </li>
+							
+						</ul>
+						<ul class="choose-property2 width-mod2 closed-menu-property">
+						<li class="commercial type-dial js-commercial">С/у раздел</li>
+						
+							<li class="commercial type-dial">С/у совмест</li>
+						</ul>
+						</div>
+						<div class="choose-property-container balcony">
+							<p>Балкон</p>
+						<ul class="choose-property width-mod2">
+							
+							
+							<li class="commercial type-dial js-commercial">Нет</li>
+							<li class="commercial type-dial">Нет </li>
+							<li class="commercial type-dial">ДА </li>
+							
+						</ul>
+						<ul class="choose-property2 width-mod2 closed-menu-property">
+						<li class="commercial type-dial js-commercial">Нет</li>
+						
+							<li class="commercial type-dial">ДА</li>
+						</ul>
+						</div>
+						<div class="choose-property-container repairs">
+							<p>Ремонт</p>
+						<ul class="choose-property width-mod2">
+							
+							
+							<li class="commercial type-dial js-commercial">Без отделки</li>
+							<li class="commercial type-dial">Без отделки</li>
+							<li class="commercial type-dial">С отделкой</li>
+							
+						</ul>
+						<ul class="choose-property2 width-mod2 closed-menu-property">
+						<li class="commercial type-dial js-commercial">Без отделки</li>
+							
+							<li class="commercial type-dial">С отделкой</li>
+						</ul>
+					</div>
+						</div>
+					</div>
+				<div class="choose-property-buttons">
+					
+					<button class="advansed-search advansed-search-rotate">Расширенный поиск</button>
+					<button class="show-on-map">ПОКАЗАТЬ НА КАРТЕ</button>
+					<button class="show">Показать</button>
+				</div>
+				</div>
+			</div>
+				</div>
+				
+
 
 			</section>
 

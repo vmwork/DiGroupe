@@ -74,81 +74,126 @@ function openMenuList(){
     mainSearch.classList.toggle('modal-hidden');
   }
   //  выбор недвижимости
-//   const typeDialsTitle = document.querySelector('.type-dials-title');
-//   const typeDials = document.querySelector('.type-dials');
-//   const typeObjects = document.querySelector('.type-objects');
-//   const typeAreas  = document.querySelector('.type-areas');
-// if(typeDials && typeObjects && typeAreas && typeDialsTitle){
-//   typeDials.children[0].addEventListener('click', () => {
-//         typeDials.classList.toggle('type-dials-opend')
+const commercial = document.querySelectorAll('.js-commercial ');
+if(commercial){
+  for(let i = 0; i < commercial.length; i++){
+commercial[i].addEventListener('click', openMenuItem(i))
+}
 
-//         for (let i = 1; i < typeDials.children.length; i++){
-     
-//           typeDials.children[i].addEventListener('click', () => {
-//             typeDials.children[0].textContent = typeDials.children[i].textContent
-//             typeDials.classList.remove('type-dials-opend')
-//           })
-//         }
-//   })
-
-//   typeObjects.children[0].addEventListener('click', () => {
-//     typeObjects.classList.toggle('type-objects-opend')
-//     for (let i = 1; i < typeObjects.children.length; i++){
-     
-//       typeObjects.children[i].addEventListener('click', () => {
-//         typeObjects.children[0].textContent = typeObjects.children[i].textContent
-//         typeObjects.classList.remove('type-objects-opend')
-//       })
-//     }
-  
-//   })
-
-//   typeAreas.children[0].addEventListener('click', () => {
-//     typeAreas.classList.toggle('type-areas-opend')
-//     for (let i = 1; i < typeAreas.children.length; i++){
-     
-//       typeAreas.children[i].addEventListener('click', () => {
-//         typeAreas.children[0].textContent = typeAreas.children[i].textContent
-//         typeAreas.classList.remove('type-areas-opend')
-//       })
-//     }
-//   })
-  
-//   const typeDialFirst = document.querySelectorAll('.type-dial-first')
-//   if(typeDialFirst){
-//     for (let i = 0; i < typeDialFirst.length; i++){
-//       typeDialFirst[i].addEventListener('click', (e) => {
-//         let typeDialFirstParent = e.target.parentElement.querySelector('.type-container');
-//         typeDialFirstParent.classList.toggle('show-menu')
-        
-//         for (let j = 0; j < typeAreas.children.length; j++){
-//           console.log(typeAreas.children.length)
-//           typeDialFirstParent.children[j].addEventListener('click', () => {
-//             typeDialFirst[i].textContent = typeDialFirstParent.children[j].textContent;
-//             typeDialFirstParent.classList.add('show-menu')
-           
-//           })
-//         }
-      
-//       })
-//     }
- 
-//   }
-  
-  
-//   typeDialsTitle.children[0].addEventListener('click', () => {
-//     typeDialsTitle.classList.toggle('type-areas-opend')
-//     for (let i = 1; i < typeDialsTitle.children.length; i++){
-     
-//       typeDialsTitle.children[i].addEventListener('click', () => {
-//         typeDialsTitle.children[0].textContent = typeDialsTitle.children[i].textContent
-//         typeDialsTitle.classList.remove('type-areas-opend')
-//       })
-//     }
-    
-//   })
+}
+function openMenuItem(i){
+  return function(e){
    
-// }
+   
+    if( e.target.parentElement.classList.contains('choose-property')){
+      checkOpenButtons(e.target.parentElement)
+         e.target.parentElement.classList.toggle('js-choose-propert');
+        
+        chooseOfTypeMobile(e.target.parentElement)
+        
+        let desctopMenuOpen = e.target.parentElement.parentElement.querySelector('.choose-property2');
+        if(desctopMenuOpen){
+          
+          desctopMenuOpen.classList.toggle('closed-menu-property')
+        chooseOfType(desctopMenuOpen, e.target.parentElement)
+        }
+        
+        
+        
+    } else if(e.target.parentElement.parentElement.classList.contains('choose-property')){
+      checkOpenButtons(e.target.parentElement.parentElement)
+       e.target.parentElement.parentElement.classList.toggle('js-choose-propert');
+      
+      chooseOfTypeMobile(e.target.parentElement.parentElement)
+      
+    }
+    
+   }
+}
+// check opend buttons
+function checkOpenButtons(el){
+  let allOpenButtons = document.querySelectorAll('.choose-property2');
+  let allOpendButtonsMobile = document.querySelectorAll('.choose-property');
+  // console.log(el)
+  for(let i = 0; i < allOpenButtons.length; i++){
+    if(el.classList.contains('js-choose-propert')){
+      return
+    } else {allOpenButtons[i].classList.add('closed-menu-property')}
+
+
+     
+
+  }
+  for(let i = 0; i < allOpendButtonsMobile.length; i++){
+
+    if(el.classList.contains('js-choose-propert')){
+      return
+    } else if(allOpendButtonsMobile[i].classList.contains('js-choose-propert')){
+      allOpendButtonsMobile[i].classList.toggle('js-choose-propert')
+    }
+   
+    
+  }
+  
+  
+}
+// desctop
+function chooseOfType(el, parent){
+  
+  let choosen = '';
+  for(let i = 0; i < el.children.length; i++){
+    el.children[i].addEventListener('click', (e) =>{
+      choosen = e.target.textContent
+      parent.children[0].textContent = choosen
+      parent.classList.toggle('js-choose-propert');
+      el.classList.add('closed-menu-property')
+      
+    })
+    
+  }
+} 
+// mobile 
+function chooseOfTypeMobile(el){
+  
+  for(let i = 1; i < el.children.length; i++){
+    
+    el.children[i].addEventListener('click', (e) => {
+      el.children[0].textContent = el.children[i].textContent
+      
+      el.classList.remove('js-choose-propert');
+    })
+    
+  }
+}
+// вывод табов
+let tabToggle = document.querySelectorAll('.tab-toggle');
+let tabContainer = document.querySelectorAll('.tabs-cotainer');
+if(tabToggle){
+  for(let i = 0; i < tabToggle.length; i++){
+    tabToggle[i].addEventListener('click', toggleTab(i))
+    
+  }
+}
+function toggleTab(i){
+  return function(e){
+   
+     clearColorTabs()
+    tabToggle[i].classList.add('color-mod')
+      closeAllTabs()
+    tabContainer[i].classList.remove('tab-hidden')
+    
+  }
+}
+function clearColorTabs(){
+  for(let i = 0; i < tabToggle.length; i++){
+    tabToggle[i].classList.remove('color-mod')
+  }
+}
+function closeAllTabs(){
+  for(let i = 0; i < tabToggle.length; i++){
+    tabContainer[i].classList.add('tab-hidden')
+  }
+}
 
   // вывод модалки call-back
   const callBackmodal = document.querySelector('.modal-call-back');
@@ -193,5 +238,28 @@ function openMenuList(){
     selectedCity[0].textContent = e.target.textContent;
     closeModalChooseCity()
   }
+  const advansedSearchBlock = document.querySelectorAll('.advansed-block') 
+  const advansedSearchButton = document.querySelectorAll('.advansed-search') 
+  if(advansedSearchBlock && advansedSearchButton){
+    for (let i = 0; i < advansedSearchBlock.length; i++){
+      advansedSearchButton[i].addEventListener('click', openAdvansedSearchBlock(i))
+    }
+  }
+ function openAdvansedSearchBlock(i){
+   return function(e){
+     if(!advansedSearchButton[i].classList.contains('advansed-search-rotate')){
+       advansedSearchButton[i].textContent = "Расширенный поиск"
+     
+     } else {
+       advansedSearchButton[i].textContent = "Свернуть"
+       
+     }
+     
+    advansedSearchButton[i].classList.toggle('advansed-search-rotate');
+    
+    advansedSearchBlock[i].classList.toggle('advansed-search-hidden');
+     console.log(advansedSearchButton[i])
+   }
+ }
   
 })();
